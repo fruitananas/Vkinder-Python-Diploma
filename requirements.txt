@@ -1,0 +1,4 @@
+vk_api>=11.9.9
+python-dotenv>=0.21.1
+sqlalchemy>=1.4.46
+psycopg2>=2.9.5
