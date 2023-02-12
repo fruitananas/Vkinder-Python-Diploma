@@ -1,5 +1,5 @@
 from sqlalchemy.engine import create_engine
-from sqlalchemy import MetaData, Table, String, Column, Boolean, Integer
+from sqlalchemy import MetaData, Table, String, Column, Integer
 from dotenv import load_dotenv
 import os
 
@@ -8,17 +8,6 @@ load_dotenv()
 
 metadata = MetaData()
 
-found_users = Table('found_users', metadata,
-    Column('id', Integer, primary_key=True),
-    Column('user_id', String(20), unique=True, index=True),
-    Column('first_name', String(40)),
-    Column('last_name', String(40)),
-    Column('age', Integer),
-    Column('city', Integer),
-    Column('sex', Integer),
-    Column('user_url', String(50)),
-    Column('seen', Boolean, default=False)
-)
 
 user_preferences = Table('user_preferences', metadata,
     Column('id', Integer, primary_key=True),
